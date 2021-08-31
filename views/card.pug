@@ -1,0 +1,15 @@
+div(class='col col-md-4')
+  div(class='card')
+    a(href='goods/' + value['slug'])
+      h3(class='card-tite text-center') #{value['name']}
+      img(
+        src='images/' + value['image']
+        class='card-images'
+      )
+      p(class='text-center') #{value['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+    ul(class='card-actions')
+      li
+        button(
+          data-goods_id=value['id']
+          class='button button-primary add-to-cart'
+        ) To cart

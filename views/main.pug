@@ -1,0 +1,14 @@
+include header
+include site_header
+h2 My Express Server
+p #{foo}
+div #{bar}
+each value, index in goods
+  p #{value['name']}
+  img(
+    src="images/" + value['image'],
+    alt=""
+  )
+
+include nav
+include footer

@@ -1,0 +1,26 @@
+h1 Admin panel
+h2 Orders info
+table
+  tr
+    th ID
+    th Date
+    th User ID
+    th Goods ID
+    th Goods Cost
+    th Goods Amount
+    th Total
+    th User Name
+    th User Phone
+    th User Address
+  each value, index in orders
+    tr
+      td #{value['id']}
+      td #{value['timestamp']}
+      td #{value['user_id']}
+      td #{value['goods_id']}
+      td #{value['goods_cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+      td #{value['goods_amount']}
+      td #{value['total'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+      td #{value['user_name']}
+      td #{value['user_phone']}
+      td #{value['user_address']}
